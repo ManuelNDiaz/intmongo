@@ -34,12 +34,9 @@ const httpServer=app.listen(PORT,()=>{
 
 const socketServer= new Server(httpServer)
 
-// import ProductManager from "./dao/filemanagers/controllers/productManager.js"
-// const pmanagersocket=new ProductManager(__dirname+"/dao/filemanagers/db/products.json")
 import ProductManager from "./dao/mongomanagers/productManagerMongo.js"
 const pmanagersocket=new ProductManager()
 
-// Importar MessagesManager
 import MessagesManager from "./dao/mongomanagers/messageManagerMongo.js";
 const messagesManager = new MessagesManager();
 
